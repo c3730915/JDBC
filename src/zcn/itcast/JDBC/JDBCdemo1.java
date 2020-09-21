@@ -13,7 +13,7 @@ public class JDBCdemo1 {
         try {
             Class.forName("com.mysql.jdbc.Driver");
              connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc", "root", "123456");
-            String sql = "update user set password = 12200 where id = 1 ";
+            String sql = "update user set password = 9990 where id = 1 ";
             //获取执行对象statement
              statement = connection.createStatement();
             //执行sql
