@@ -28,7 +28,7 @@ public class JDBCUtils {
             user=properties.getProperty("user");
             password=properties.getProperty("password");
             driver=properties.getProperty("driver");
-            Class.forName(driver);
+            Class.forName(driver); //注册驱动
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -41,7 +41,7 @@ public class JDBCUtils {
      * @return 连接对象
      */
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc", "root", "123456");
+        return DriverManager.getConnection(url, user, password);
     }
 
     /**
