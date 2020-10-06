@@ -1,4 +1,4 @@
-package zcn.itcast.JDBC;
+package zcn.itcast.JDBC.Basic;
 
 import java.sql.*;
 

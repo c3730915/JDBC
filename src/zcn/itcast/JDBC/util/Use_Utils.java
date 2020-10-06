@@ -1,6 +1,6 @@
 package zcn.itcast.JDBC.util;
 
-import zcn.itcast.JDBC.Emp;
+import zcn.itcast.JDBC.Basic.Emp;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
