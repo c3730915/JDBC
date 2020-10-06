@@ -5,6 +5,7 @@ import com.alibaba.druid.pool.DruidDataSourceFactory;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
@@ -35,5 +36,23 @@ public class JDBCUtils {
         if ((connection !=null)){
             connection.close();
         }
+    }
+    public static void close(ResultSet resultSet ,Statement statement, Connection connection) throws SQLException {
+
+        if ((statement !=null)){
+            statement.close();
+        }
+
+        if ((resultSet !=null)){
+            resultSet.close();
+        }
+        if ((connection !=null)){
+            connection.close();
+        }
+
+    }
+    //获取连接池
+    public static DataSource getDs(){
+        return ds;
     }
 }
